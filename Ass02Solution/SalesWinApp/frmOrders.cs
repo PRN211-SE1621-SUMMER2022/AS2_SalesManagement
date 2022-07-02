@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-    public partial class Products : Form
+    public partial class Orders : Form
     {
-        public Products()
+        public Orders()
         {
             InitializeComponent();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

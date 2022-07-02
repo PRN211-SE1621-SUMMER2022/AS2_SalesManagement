@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Ass02Solution",
+    "\\Ass02Solution\\BusinessObject",
+    "\\Ass02Solution\\DataAccess",
+    "\\Ass02Solution\\SalesWinApp",
+    "\\data"
   ],
-  "SelectedNode": "\\Ass02Solution.sln",
+  "SelectedNode": "\\Ass02Solution\\Ass02Solution.sln",
   "PreviewInSolutionExplorer": false
 }
