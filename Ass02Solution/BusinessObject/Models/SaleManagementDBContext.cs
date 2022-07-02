@@ -25,8 +25,7 @@ namespace BusinessObject.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server =(local); database = SaleManagementDB;uid=avillX;pwd=0711;");
+                optionsBuilder.UseSqlServer("server =SE150222\\MSSQLSERVER2019Z; database = SaleManagementDB;uid=sa;pwd=sa;TrustServerCertificate=True");
             }
         }
 
@@ -36,7 +35,7 @@ namespace BusinessObject.Models
             {
                 entity.ToTable("Member");
 
-                entity.Property(e => e.MemberId).ValueGeneratedNever();
+                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.City)
                     .HasMaxLength(15)
@@ -63,7 +62,7 @@ namespace BusinessObject.Models
             {
                 entity.ToTable("Order");
 
-                entity.Property(e => e.OrderId).ValueGeneratedNever();
+                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Freight).HasColumnType("money");
 
@@ -105,7 +104,7 @@ namespace BusinessObject.Models
             {
                 entity.ToTable("Product");
 
-                entity.Property(e => e.ProductId).ValueGeneratedNever();
+                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.ProductName)
                     .HasMaxLength(40)

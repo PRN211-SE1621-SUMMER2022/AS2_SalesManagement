@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusinessObject.Models
 {
-    public partial class Member
+    public partial class Member : IEntityWithId
     {
         public Member()
         {
             Orders = new HashSet<Order>();
         }
-
-        public int MemberId { get; set; }
+        [Column("memberId")]
+        public int Id { get; set; }
         public string Email { get; set; } = null!;
         public string CompanyName { get; set; } = null!;
         public string City { get; set; } = null!;

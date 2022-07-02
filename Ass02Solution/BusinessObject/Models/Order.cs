@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BusinessObject.Models
 {
-    public partial class Order
+    public partial class Order : IEntityWithId
     {
         public Order()
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        public int OrderId { get; set; }
+        [Column("orderId")]
+        public int Id { get; set; }
         public int MemberId { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime? RequiredDate { get; set; }
