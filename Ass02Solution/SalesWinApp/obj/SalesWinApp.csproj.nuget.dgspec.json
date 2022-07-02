@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Software\\VS\\workspace\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {}
   },
   "projects": {
-    "C:\\Software\\VS\\workspace\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\VS\\workspace\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
         "projectName": "SalesWinApp",
-        "projectPath": "C:\\Software\\VS\\workspace\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\VS\\workspace\\Ass02Solution\\SalesWinApp\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\SalesWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
