@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "utPu92NygT/5RegAJ2o+E18PgYT8wHi0hoOb/9c6uHd0FIpVT+tBE4VzUGm1+JHZ1Awpzyh51f0IZo9ttYFmig==",
+  "dgSpecHash": "3H2Pv1k03q+ZH4D/efAUdXJI0Htpt5/ZUcSHWokIl13f3CQE1NhuQnKGjxHEFg/mE9q+Be2ME8nF+dcr1hRtbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\source\\repos\\AS2_SalesManagement\\Ass02Solution\\DataAccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
