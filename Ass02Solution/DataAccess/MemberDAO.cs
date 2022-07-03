@@ -46,7 +46,7 @@ namespace DataAccess
 
         public bool AddMember(Member member) => base.SaveEntity(member);
 
-        public bool CheckLogin(string email, string password)
+        public Member? CheckLogin(string email, string password)
         {
             using (var db = new SaleManagementDBContext())
             {
@@ -54,13 +54,13 @@ namespace DataAccess
                 {
                     return db.Set<Member>()
                         .Where(b => b.Email.Equals(email.Trim()) && b.Password.Equals(password.Trim()))
-                        .FirstOrDefault() != null;
+                        .FirstOrDefault();
                 }
                 catch (Exception)
                 { 
                 }
             }
-            return false;
+            return null;
         }
 
         public bool CheckLoginFromAccountInFile(string email, string password)

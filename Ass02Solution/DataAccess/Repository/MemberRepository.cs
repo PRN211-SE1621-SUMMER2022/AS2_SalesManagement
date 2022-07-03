@@ -11,7 +11,7 @@ namespace DataAccess.Repository
     {
         public bool AddMember(Member member) => MemberDAO.Instance.AddMember(member);
 
-        public bool CheckLogin(string email, string password) => MemberDAO.Instance.CheckLogin(email, password);
+        public Member? CheckLogin(string email, string password) => MemberDAO.Instance.CheckLogin(email, password);
         public bool CheckLoginFromAccountInFile(string email, string password) => MemberDAO.Instance.CheckLoginFromAccountInFile(email, password);
         public bool DeleteMember(Member member) => MemberDAO.Instance.DeleteMember(member);
 

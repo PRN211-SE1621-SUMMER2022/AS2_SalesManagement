@@ -9,7 +9,7 @@ namespace DataAccess
 {
     public interface IMemberRepository
     {
-        Boolean CheckLogin(string email, string password);
+        Member? CheckLogin(string email, string password);
         public bool CheckLoginFromAccountInFile(string email, string password);
         Member GetMemberByEmail(string email);
         Boolean UpdateMember(Member member);

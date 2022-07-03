@@ -1,3 +1,4 @@
+using BusinessObject.Models;
 using DataAccess.Repository;
 
 namespace SalesWinApp
@@ -13,23 +14,33 @@ namespace SalesWinApp
         {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
-            if(memberRepository.CheckLoginFromAccountInFile(email,password))
-            {   
-                frmMain frmMain = new frmMain(); ;
-                this.Hide();
-                frmMain.ShowDialog();
-                this.Show();
-            }
-            else if (memberRepository.CheckLogin(email , password))
+            if (memberRepository.CheckLoginFromAccountInFile(email, password))
             {
-                frmMain frmMain = new frmMain(); ;
+                frmMain frmMain = new frmMain()
+                {
+                    isAdmin = true
+                };
                 this.Hide();
                 frmMain.ShowDialog();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Wrong email or pass word, please try again", "Wrong user");
+                Member? loginUser = memberRepository.CheckLogin(email, password);
+                if (loginUser != null)
+                {
+                    frmMain frmMain = new frmMain()
+                    {
+                        loginUser = loginUser
+                    };
+                    this.Hide();
+                    frmMain.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect email or password, please try again!", "Login fail");
+                }
             }
         }
 
@@ -43,24 +54,15 @@ namespace SalesWinApp
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            txtEmail.Clear();
+            txtPassword.Clear();
         }
     }
 }

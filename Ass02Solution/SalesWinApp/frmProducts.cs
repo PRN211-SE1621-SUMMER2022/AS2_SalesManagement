@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace SalesWinApp
 {
     public partial class frmProducts : Form
     {
+        public bool isAdmin { get; set; }
+        public Member loginUser { get; set; }
+
         public frmProducts()
         {
             InitializeComponent();
@@ -28,6 +32,11 @@ namespace SalesWinApp
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
         {
 
         }

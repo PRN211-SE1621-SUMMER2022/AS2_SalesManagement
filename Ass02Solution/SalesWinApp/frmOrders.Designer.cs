@@ -1,6 +1,6 @@
 ﻿namespace SalesWinApp
 {
-    partial class Orders
+    partial class frmOrders
     {
         /// <summary>
         /// Required designer variable.
@@ -64,12 +64,12 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnclose = new System.Windows.Forms.Button();
             this.OrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnclose = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,21 +104,21 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(0, 0);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
+            this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 0;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(0, 0);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
+            this.textBox5.Size = new System.Drawing.Size(100, 23);
             this.textBox5.TabIndex = 0;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(0, 0);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
+            this.textBox6.Size = new System.Drawing.Size(100, 23);
             this.textBox6.TabIndex = 0;
             // 
             // textBox7
@@ -185,19 +185,19 @@
             // memberToolStripMenuItem
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.memberToolStripMenuItem.Text = "Member";
             // 
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.productsToolStripMenuItem.Text = "Products";
             // 
             // ordersToolStripMenuItem
             // 
             this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ordersToolStripMenuItem.Text = "Orders";
             // 
             // label1
@@ -218,26 +218,26 @@
             this.toolStripMenuItem3});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(886, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(886, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(79, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
             this.toolStripMenuItem1.Text = "Member";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(80, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(66, 20);
             this.toolStripMenuItem2.Text = "Products";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(67, 24);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(54, 20);
             this.toolStripMenuItem3.Text = "Orders";
             // 
             // Input_OrderID
@@ -286,7 +286,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "Order ID";
             // 
@@ -295,7 +295,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(291, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(63, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "Product ID";
             // 
@@ -304,7 +304,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "Unit Price";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -314,7 +314,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(291, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.Size = new System.Drawing.Size(53, 15);
             this.label5.TabIndex = 11;
             this.label5.Text = "Quantity";
             // 
@@ -323,7 +323,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(564, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.Size = new System.Drawing.Size(54, 15);
             this.label6.TabIndex = 12;
             this.label6.Text = "Discount";
             // 
@@ -363,6 +363,7 @@
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -389,16 +390,6 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(804, 218);
             this.dataGridView1.TabIndex = 21;
-            // 
-            // btnclose
-            // 
-            this.btnclose.Location = new System.Drawing.Point(747, 543);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(98, 40);
-            this.btnclose.TabIndex = 22;
-            this.btnclose.Text = "Close";
-            this.btnclose.UseVisualStyleBackColor = true;
-            this.btnclose.Click += new System.EventHandler(this.button4_Click);
             // 
             // OrderID
             // 
@@ -435,7 +426,17 @@
             this.Discount.Name = "Discount";
             this.Discount.Width = 125;
             // 
-            // Orders
+            // btnclose
+            // 
+            this.btnclose.Location = new System.Drawing.Point(747, 543);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(98, 40);
+            this.btnclose.TabIndex = 22;
+            this.btnclose.Text = "Close";
+            this.btnclose.UseVisualStyleBackColor = true;
+            this.btnclose.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // frmOrders
             // 
             this.ClientSize = new System.Drawing.Size(886, 595);
             this.Controls.Add(this.btnclose);
@@ -445,7 +446,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "Orders";
+            this.Name = "frmOrders";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
