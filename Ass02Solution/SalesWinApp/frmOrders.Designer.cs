@@ -54,6 +54,7 @@
             this.RequiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShippedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Freight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDAOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
@@ -170,6 +171,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.txtFreight);
             this.panel1.Controls.Add(this.f);
             this.panel1.Controls.Add(this.txtShippedDate);
@@ -184,7 +186,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(25, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 188);
+            this.panel1.Size = new System.Drawing.Size(1228, 219);
             this.panel1.TabIndex = 12;
             // 
             // btnLoad
@@ -193,31 +195,31 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Location = new System.Drawing.Point(764, 276);
+            this.btnLoad.Location = new System.Drawing.Point(764, 299);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 39);
             this.btnLoad.TabIndex = 13;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_click);
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(1030, 276);
+            this.btnUpdate.Location = new System.Drawing.Point(1030, 299);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 39);
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(1159, 276);
+            this.btnDelete.Location = new System.Drawing.Point(1159, 299);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 15;
@@ -233,7 +235,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(897, 276);
+            this.btnAdd.Location = new System.Drawing.Point(897, 299);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
             this.btnAdd.TabIndex = 17;
@@ -307,6 +309,20 @@
             this.Freight.Name = "Freight";
             this.Freight.Width = 210;
             // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnView.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnView.Location = new System.Drawing.Point(1066, 160);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(115, 39);
+            this.btnView.TabIndex = 12;
+            this.btnView.Text = "View Detail";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -355,5 +371,6 @@
         private DataGridViewTextBoxColumn RequiredDate;
         private DataGridViewTextBoxColumn ShippedDate;
         private DataGridViewTextBoxColumn Freight;
+        private Button btnView;
     }
 }

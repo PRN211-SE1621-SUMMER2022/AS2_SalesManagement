@@ -20,32 +20,30 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+
+
+        private void frmOrderDetails_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void frmOrders_Load(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Input_ProductID_TextChanged(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
         }
