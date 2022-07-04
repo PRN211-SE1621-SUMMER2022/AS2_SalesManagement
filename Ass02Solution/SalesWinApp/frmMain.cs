@@ -38,7 +38,7 @@ namespace SalesWinApp
 
         private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmOrders frm = new frmOrders() { isAdmin = this.isAdmin, loginUser = this.loginUser };
+            frmOrderDetails frm = new frmOrderDetails() { isAdmin = this.isAdmin, loginUser = this.loginUser };
             frm.MdiParent = this;
             frm.Show();
             frm.Activate();

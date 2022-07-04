@@ -73,7 +73,7 @@ namespace SalesWinApp
                     txtUnitPrice.DataBindings.Add("Text", source, "UnitPrice");
                     txtUnitsInStock.DataBindings.Add("Text", source, "UnitsInStock");
                     dgvProductList.DataSource = source;
-                    dgvProductList.Columns["OrderDetails"].Visible = false;
+                    dgvProductList.Columns["Orders"].Visible = false;
                 }
                 catch (Exception ex)
                 {
