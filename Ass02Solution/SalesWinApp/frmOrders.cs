@@ -96,6 +96,11 @@ namespace SalesWinApp
             frmUpdateOrder.ShowDialog();
         }
 
+        private void frmOrders_Load(object sender, EventArgs e)
+        {
+            LoadOrderList(orderRepository.GetAllOrder());
+        }
+
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadOrderList(orderRepository.GetAllOrder());
@@ -122,5 +127,7 @@ namespace SalesWinApp
         {
 
         }
+
+
     }
 }

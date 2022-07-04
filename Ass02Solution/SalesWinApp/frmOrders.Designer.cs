@@ -42,6 +42,7 @@
             this.txtShippedDate = new System.Windows.Forms.TextBox();
             this.l6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.RequiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShippedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Freight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDAOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
@@ -184,10 +184,24 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtOrderID);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(25, 59);
+            this.panel1.Location = new System.Drawing.Point(25, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1228, 219);
             this.panel1.TabIndex = 12;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnView.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnView.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnView.Location = new System.Drawing.Point(1066, 160);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(115, 39);
+            this.btnView.TabIndex = 12;
+            this.btnView.Text = "View Detail";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnLoad
             // 
@@ -195,7 +209,7 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Location = new System.Drawing.Point(764, 299);
+            this.btnLoad.Location = new System.Drawing.Point(764, 251);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 39);
             this.btnLoad.TabIndex = 13;
@@ -207,7 +221,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(1030, 299);
+            this.btnUpdate.Location = new System.Drawing.Point(1030, 251);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 39);
             this.btnUpdate.TabIndex = 14;
@@ -219,7 +233,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(1159, 299);
+            this.btnDelete.Location = new System.Drawing.Point(1159, 251);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 15;
@@ -235,7 +249,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(897, 299);
+            this.btnAdd.Location = new System.Drawing.Point(897, 251);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 39);
             this.btnAdd.TabIndex = 17;
@@ -254,11 +268,11 @@
             this.ShippedDate,
             this.Freight});
             this.dgvOrderList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvOrderList.Location = new System.Drawing.Point(0, 367);
+            this.dgvOrderList.Location = new System.Drawing.Point(0, 322);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.RowHeadersWidth = 51;
             this.dgvOrderList.RowTemplate.Height = 29;
-            this.dgvOrderList.Size = new System.Drawing.Size(1282, 294);
+            this.dgvOrderList.Size = new System.Drawing.Size(1282, 339);
             this.dgvOrderList.TabIndex = 18;
             // 
             // Id
@@ -309,20 +323,6 @@
             this.Freight.Name = "Freight";
             this.Freight.Width = 210;
             // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.Transparent;
-            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnView.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnView.Location = new System.Drawing.Point(1066, 160);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(115, 39);
-            this.btnView.TabIndex = 12;
-            this.btnView.Text = "View Detail";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -336,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmOrders";
             this.Text = "frmOrders";
+            this.Load += new System.EventHandler(this.frmOrders_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDAOBindingSource)).EndInit();
