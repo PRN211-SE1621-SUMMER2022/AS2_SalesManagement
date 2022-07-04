@@ -17,10 +17,7 @@ namespace SalesWinApp
         public Member MemberInfor { get; set; }
         MemberRepository memberRepository = new MemberRepository();
         public frmMembers Frm { get; set; }
-        public frmMemberDetail()
-        {
-            InitializeComponent();
-        }
+        public frmMemberDetail() => InitializeComponent();
 
         private void label1_Click(object sender, EventArgs e)
         {

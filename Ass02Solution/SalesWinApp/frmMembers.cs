@@ -20,20 +20,14 @@ namespace SalesWinApp
         IMemberRepository memberRepository = new MemberRepository();
         BindingSource source;
 
-        public frmMembers()
-        {
-            InitializeComponent();
-        }
+        public frmMembers() => InitializeComponent();
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void frmMembers_Load(object sender, EventArgs e)
-        {
-            LoadMemberList();
-        }
+        private void frmMembers_Load(object sender, EventArgs e) => LoadMemberList();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,7 +63,6 @@ namespace SalesWinApp
             var members = memberRepository.GetAllMember();
             if (members.Count()!=0)
             {
-                dgvMemberList.Visible = true;
                 try
                 {
                     source = new BindingSource();
@@ -88,7 +81,6 @@ namespace SalesWinApp
                     txtEmail.DataBindings.Clear();
                     txtCountry.DataBindings.Clear();
                     txtCity.DataBindings.Clear();
-
                     txtMemberID.DataBindings.Add("Text", source, "Id");
                     txtCompanyName.DataBindings.Add("Text", source, "CompanyName");
                     txtPassword.DataBindings.Add("Text", source, "Password");
@@ -98,28 +90,6 @@ namespace SalesWinApp
 
                     dgvMemberList.DataSource = source;
                     dgvMemberList.Columns["Orders"].Visible = false;
-                    if (isAdmin == false)
-                    {
-                        if (members.Count() == 0)
-                        {
-                            btnDelete.Enabled = false;
-                        }
-                        else
-                        {
-                            btnDelete.Enabled = false;
-                        }
-                    }
-                    else
-                    {
-                        if (members.Count() == 0)
-                        {
-                            btnDelete.Enabled = false;
-                        }
-                        else
-                        {
-                            btnDelete.Enabled = true;
-                        }
-                    }
                 }
                 catch (Exception ex)
                 {
@@ -128,7 +98,7 @@ namespace SalesWinApp
             }
             else
             {
-                dgvMemberList.Visible = false;
+                dgvMemberList.Rows.Clear();
             }
 
         }
@@ -158,7 +128,7 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvMemberList.Visible)
+            if (dgvMemberList.Rows.Count != 0)
             {
                 try
                 {
@@ -180,15 +150,12 @@ namespace SalesWinApp
                 Text = "Add member",
                 Frm = this
             };
-            if (frmMemberDetail.ShowDialog() == DialogResult.OK)
-            {
-                LoadMemberList();
-            }
+            frmMemberDetail.ShowDialog();
         }
 
         private void btnUpdateClick(object sender, EventArgs e)
         {
-            if (dgvMemberList.Visible)
+            if (dgvMemberList.Rows.Count!=0)
             {
                 frmMemberDetail frmMemberDetail = new frmMemberDetail
                 {
@@ -196,14 +163,16 @@ namespace SalesWinApp
                     Frm = this,
                     MemberInfor = GetCurrentMemberInDgv()
                 };
-                if (frmMemberDetail.ShowDialog() == DialogResult.OK)
-                {
-                    LoadMemberList();
-                }
+                frmMemberDetail.ShowDialog();
             }
         }
 
         private void dgvMemberList_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

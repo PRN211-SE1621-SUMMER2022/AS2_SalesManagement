@@ -29,12 +29,24 @@ namespace DataAccess
         }
         public IEnumerable<Product> GetAllProduct() => base.GetAllEntity();
 
-        public IEnumerable<Product> GetFilteredProduct(string tag)
-        {
-            throw new NotImplementedException();
-        }
-
         public Product GetProductById(int productId) => base.GetEntityById(productId);
+
+        public IEnumerable<Product>? GetProductByName(string productName)
+        {
+            using (var db = new SaleManagementDBContext())
+            {
+                try
+                {
+                    productName = productName.Trim();
+                    return (IEnumerable<Product>)db.Set<Product>()
+                        .Where(p => p.ProductName.Contains(productName)).ToList();
+                }
+                catch (Exception)
+                {
+                }
+            }
+            return null;
+        }
 
         public void InsertProduct(Product product) => base.SaveEntity(product);
 

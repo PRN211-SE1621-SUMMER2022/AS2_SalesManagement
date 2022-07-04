@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvMemberList = new System.Windows.Forms.DataGridView();
             this.MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +68,6 @@
             // 
             // dgvMemberList
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgvMemberList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMemberList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMemberList.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
@@ -86,18 +81,19 @@
             this.Password,
             this.City,
             this.Country});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMemberList.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMemberList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMemberList.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.dgvMemberList.Location = new System.Drawing.Point(2, 256);
             this.dgvMemberList.Margin = new System.Windows.Forms.Padding(5);
             this.dgvMemberList.Name = "dgvMemberList";
+            this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 60;
             this.dgvMemberList.RowTemplate.Height = 25;
             this.dgvMemberList.Size = new System.Drawing.Size(1282, 411);
@@ -108,11 +104,11 @@
             // 
             // MemberID
             // 
-            this.MemberID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.MemberID.DataPropertyName = "Id";
             this.MemberID.HeaderText = "MemberID";
             this.MemberID.MinimumWidth = 6;
             this.MemberID.Name = "MemberID";
+            this.MemberID.ReadOnly = true;
             this.MemberID.Width = 109;
             // 
             // CompanyName
@@ -121,6 +117,7 @@
             this.CompanyName.HeaderText = "CompanyName";
             this.CompanyName.MinimumWidth = 6;
             this.CompanyName.Name = "CompanyName";
+            this.CompanyName.ReadOnly = true;
             this.CompanyName.Width = 210;
             // 
             // Email
@@ -129,26 +126,25 @@
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             this.Email.Width = 270;
             // 
             // Password
             // 
             this.Password.DataPropertyName = "Password";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.Password.DefaultCellStyle = dataGridViewCellStyle2;
             this.Password.HeaderText = "Password";
             this.Password.MinimumWidth = 6;
             this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
             this.Password.Width = 200;
             // 
             // City
             // 
             this.City.DataPropertyName = "City";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.City.DefaultCellStyle = dataGridViewCellStyle3;
             this.City.HeaderText = "City";
             this.City.MinimumWidth = 6;
             this.City.Name = "City";
+            this.City.ReadOnly = true;
             this.City.Width = 200;
             // 
             // Country
@@ -157,6 +153,7 @@
             this.Country.HeaderText = "Country";
             this.Country.MinimumWidth = 6;
             this.Country.Name = "Country";
+            this.Country.ReadOnly = true;
             this.Country.Width = 200;
             // 
             // btnLoad
@@ -184,46 +181,47 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
+            this.label1.Size = new System.Drawing.Size(91, 21);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Member ID";
+            this.label1.Text = "Member ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(319, 27);
+            this.label2.Location = new System.Drawing.Point(348, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 21);
+            this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Email";
+            this.label2.Text = "Email:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(319, 70);
+            this.label3.Location = new System.Drawing.Point(348, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 21);
+            this.label3.Size = new System.Drawing.Size(126, 21);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Company Name";
+            this.label3.Text = "Company Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(842, 27);
+            this.label4.Location = new System.Drawing.Point(905, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 21);
+            this.label4.Size = new System.Drawing.Size(40, 21);
             this.label4.TabIndex = 8;
-            this.label4.Text = "City";
+            this.label4.Text = "City:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(842, 74);
+            this.label5.Location = new System.Drawing.Point(905, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 21);
+            this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Country";
+            this.label5.Text = "Country:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -231,9 +229,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 67);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 21);
+            this.label6.Size = new System.Drawing.Size(79, 21);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Password";
+            this.label6.Text = "Password:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtMemberID
@@ -241,12 +239,12 @@
             this.txtMemberID.Location = new System.Drawing.Point(97, 23);
             this.txtMemberID.Multiline = true;
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(159, 28);
+            this.txtMemberID.Size = new System.Drawing.Size(191, 28);
             this.txtMemberID.TabIndex = 11;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(448, 23);
+            this.txtEmail.Location = new System.Drawing.Point(492, 23);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(326, 28);
@@ -254,7 +252,7 @@
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(448, 70);
+            this.txtCompanyName.Location = new System.Drawing.Point(492, 70);
             this.txtCompanyName.Multiline = true;
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(326, 25);
@@ -262,19 +260,19 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(914, 67);
+            this.txtCountry.Location = new System.Drawing.Point(995, 64);
             this.txtCountry.Multiline = true;
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(140, 28);
+            this.txtCountry.Size = new System.Drawing.Size(213, 28);
             this.txtCountry.TabIndex = 14;
             this.txtCountry.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(914, 20);
+            this.txtCity.Location = new System.Drawing.Point(995, 20);
             this.txtCity.Multiline = true;
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(140, 31);
+            this.txtCity.Size = new System.Drawing.Size(213, 31);
             this.txtCity.TabIndex = 15;
             // 
             // txtPassword
@@ -283,7 +281,7 @@
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(159, 28);
+            this.txtPassword.Size = new System.Drawing.Size(191, 28);
             this.txtPassword.TabIndex = 16;
             // 
             // btnDelete

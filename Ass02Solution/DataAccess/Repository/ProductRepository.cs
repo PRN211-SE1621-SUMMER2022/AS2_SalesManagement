@@ -11,12 +11,9 @@ namespace DataAccess.Repository
     {
         public IEnumerable<Product> GetAllProduct() => ProductDAO.Instance.GetAllProduct();
 
-        public IEnumerable<Product> GetFilteredProduct(string tag)
-        {
-            throw new NotImplementedException();
-        }
-
         public Product GetProductById(int productId) => ProductDAO.Instance.GetProductById(productId);
+
+        public IEnumerable<Product> GetProductByName(string productName) => ProductDAO.Instance.GetProductByName(productName);
 
         public void InsertProduct(Product product) => ProductDAO.Instance.InsertProduct(product);
 
