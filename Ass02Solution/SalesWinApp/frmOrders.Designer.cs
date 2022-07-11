@@ -64,107 +64,120 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(33, 34);
+            this.label1.Location = new System.Drawing.Point(78, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 28);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "OrderID";
             // 
             // txtOrderID
             // 
             this.txtOrderID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOrderID.Location = new System.Drawing.Point(138, 34);
+            this.txtOrderID.Location = new System.Drawing.Point(197, 66);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(209, 34);
+            this.txtOrderID.Size = new System.Drawing.Size(165, 29);
             this.txtOrderID.TabIndex = 1;
             // 
             // txtMemberID
             // 
             this.txtMemberID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMemberID.Location = new System.Drawing.Point(138, 108);
+            this.txtMemberID.Location = new System.Drawing.Point(197, 143);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(209, 34);
+            this.txtMemberID.Size = new System.Drawing.Size(165, 29);
             this.txtMemberID.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(33, 108);
+            this.label2.Location = new System.Drawing.Point(78, 143);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 28);
+            this.label2.Size = new System.Drawing.Size(84, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "MemberID";
             // 
             // txtOrderDate
             // 
             this.txtOrderDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOrderDate.Location = new System.Drawing.Point(539, 34);
+            this.txtOrderDate.Location = new System.Drawing.Point(576, 66);
+            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(209, 34);
+            this.txtOrderDate.Size = new System.Drawing.Size(165, 29);
             this.txtOrderDate.TabIndex = 5;
+            this.txtOrderDate.TextChanged += new System.EventHandler(this.txtOrderDate_TextChanged);
             // 
             // l3
             // 
             this.l3.AutoSize = true;
             this.l3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l3.Location = new System.Drawing.Point(434, 34);
+            this.l3.Location = new System.Drawing.Point(458, 66);
+            this.l3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l3.Name = "l3";
-            this.l3.Size = new System.Drawing.Size(104, 28);
+            this.l3.Size = new System.Drawing.Size(83, 21);
             this.l3.TabIndex = 4;
             this.l3.Text = "OrderDate";
             // 
             // txtRequiredDate
             // 
             this.txtRequiredDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRequiredDate.Location = new System.Drawing.Point(539, 108);
+            this.txtRequiredDate.Location = new System.Drawing.Point(576, 143);
+            this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.Size = new System.Drawing.Size(209, 34);
+            this.txtRequiredDate.Size = new System.Drawing.Size(165, 29);
             this.txtRequiredDate.TabIndex = 7;
             // 
             // l4
             // 
             this.l4.AutoSize = true;
             this.l4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l4.Location = new System.Drawing.Point(402, 108);
+            this.l4.Location = new System.Drawing.Point(436, 146);
+            this.l4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l4.Name = "l4";
-            this.l4.Size = new System.Drawing.Size(131, 28);
+            this.l4.Size = new System.Drawing.Size(105, 21);
             this.l4.TabIndex = 6;
             this.l4.Text = "RequiredDate";
             // 
             // txtFreight
             // 
             this.txtFreight.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtFreight.Location = new System.Drawing.Point(972, 108);
+            this.txtFreight.Location = new System.Drawing.Point(937, 143);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFreight.Name = "txtFreight";
-            this.txtFreight.Size = new System.Drawing.Size(209, 34);
+            this.txtFreight.Size = new System.Drawing.Size(165, 29);
             this.txtFreight.TabIndex = 11;
             // 
             // f
             // 
             this.f.AutoSize = true;
             this.f.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.f.Location = new System.Drawing.Point(867, 108);
+            this.f.Location = new System.Drawing.Point(829, 143);
+            this.f.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.f.Name = "f";
-            this.f.Size = new System.Drawing.Size(74, 28);
+            this.f.Size = new System.Drawing.Size(59, 21);
             this.f.TabIndex = 10;
             this.f.Text = "Freight";
             // 
             // txtShippedDate
             // 
             this.txtShippedDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtShippedDate.Location = new System.Drawing.Point(972, 34);
+            this.txtShippedDate.Location = new System.Drawing.Point(938, 66);
+            this.txtShippedDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.Size = new System.Drawing.Size(209, 34);
+            this.txtShippedDate.Size = new System.Drawing.Size(165, 29);
             this.txtShippedDate.TabIndex = 9;
             // 
             // l6
             // 
             this.l6.AutoSize = true;
             this.l6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l6.Location = new System.Drawing.Point(840, 34);
+            this.l6.Location = new System.Drawing.Point(789, 66);
+            this.l6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l6.Name = "l6";
-            this.l6.Size = new System.Drawing.Size(126, 28);
+            this.l6.Size = new System.Drawing.Size(99, 21);
             this.l6.TabIndex = 8;
             this.l6.Text = "ShippedDate";
             // 
@@ -184,10 +197,12 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtOrderID);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(25, 12);
+            this.panel1.Location = new System.Drawing.Point(33, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 219);
+            this.panel1.Size = new System.Drawing.Size(1220, 272);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnView
             // 
@@ -195,9 +210,10 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnView.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnView.Location = new System.Drawing.Point(1066, 160);
+            this.btnView.Location = new System.Drawing.Point(990, 211);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(115, 39);
+            this.btnView.Size = new System.Drawing.Size(130, 41);
             this.btnView.TabIndex = 12;
             this.btnView.Text = "View Detail";
             this.btnView.UseVisualStyleBackColor = false;
@@ -209,9 +225,10 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Location = new System.Drawing.Point(764, 251);
+            this.btnLoad.Location = new System.Drawing.Point(703, 335);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(94, 39);
+            this.btnLoad.Size = new System.Drawing.Size(105, 41);
             this.btnLoad.TabIndex = 13;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -221,9 +238,10 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(1030, 251);
+            this.btnUpdate.Location = new System.Drawing.Point(1003, 335);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 39);
+            this.btnUpdate.Size = new System.Drawing.Size(105, 41);
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -233,9 +251,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(1159, 251);
+            this.btnDelete.Location = new System.Drawing.Point(1148, 335);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 39);
+            this.btnDelete.Size = new System.Drawing.Size(105, 41);
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -249,9 +268,10 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(897, 251);
+            this.btnAdd.Location = new System.Drawing.Point(853, 335);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 39);
+            this.btnAdd.Size = new System.Drawing.Size(105, 41);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -267,13 +287,14 @@
             this.RequiredDate,
             this.ShippedDate,
             this.Freight});
-            this.dgvOrderList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvOrderList.Location = new System.Drawing.Point(0, 322);
+            this.dgvOrderList.Location = new System.Drawing.Point(33, 399);
+            this.dgvOrderList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.RowHeadersWidth = 51;
             this.dgvOrderList.RowTemplate.Height = 29;
-            this.dgvOrderList.Size = new System.Drawing.Size(1282, 339);
+            this.dgvOrderList.Size = new System.Drawing.Size(1220, 262);
             this.dgvOrderList.TabIndex = 18;
+            this.dgvOrderList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellContentClick);
             // 
             // Id
             // 
@@ -325,17 +346,24 @@
             // 
             // frmOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 661);
+            this.ClientSize = new System.Drawing.Size(1284, 661);
             this.Controls.Add(this.dgvOrderList);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(1300, 700);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1300, 700);
             this.Name = "frmOrders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOrders";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmOrders_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

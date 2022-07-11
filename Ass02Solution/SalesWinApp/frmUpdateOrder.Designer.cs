@@ -50,9 +50,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSave.Location = new System.Drawing.Point(518, 571);
+            this.btnSave.Location = new System.Drawing.Point(453, 428);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 37);
+            this.btnSave.Size = new System.Drawing.Size(81, 28);
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -60,9 +61,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(395, 571);
+            this.btnCancel.Location = new System.Drawing.Point(346, 428);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(93, 37);
+            this.btnCancel.Size = new System.Drawing.Size(81, 28);
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(71, 571);
+            this.btnClear.Location = new System.Drawing.Point(62, 428);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 37);
+            this.btnClear.Size = new System.Drawing.Size(81, 28);
             this.btnClear.TabIndex = 29;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -82,114 +85,119 @@
             // 
             this.lbUpdateOrderTittle.AutoSize = true;
             this.lbUpdateOrderTittle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbUpdateOrderTittle.Location = new System.Drawing.Point(204, 39);
+            this.lbUpdateOrderTittle.Location = new System.Drawing.Point(178, 29);
             this.lbUpdateOrderTittle.Name = "lbUpdateOrderTittle";
-            this.lbUpdateOrderTittle.Size = new System.Drawing.Size(238, 46);
+            this.lbUpdateOrderTittle.Size = new System.Drawing.Size(193, 37);
             this.lbUpdateOrderTittle.TabIndex = 28;
             this.lbUpdateOrderTittle.Text = "Update Order";
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(204, 271);
+            this.txtOrderDate.Location = new System.Drawing.Point(178, 203);
+            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(407, 27);
+            this.txtOrderDate.Size = new System.Drawing.Size(357, 23);
             this.txtOrderDate.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 274);
+            this.label6.Location = new System.Drawing.Point(52, 206);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 26;
             this.label6.Text = "Order Date:";
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(204, 333);
+            this.txtRequiredDate.Location = new System.Drawing.Point(178, 250);
+            this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.PasswordChar = '*';
-            this.txtRequiredDate.Size = new System.Drawing.Size(407, 27);
+            this.txtRequiredDate.Size = new System.Drawing.Size(357, 23);
             this.txtRequiredDate.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 336);
+            this.label5.Location = new System.Drawing.Point(52, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 20);
+            this.label5.Size = new System.Drawing.Size(84, 15);
             this.label5.TabIndex = 24;
             this.label5.Text = "Required Date:";
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(204, 463);
+            this.txtFreight.Location = new System.Drawing.Point(178, 347);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFreight.Name = "txtFreight";
-            this.txtFreight.Size = new System.Drawing.Size(407, 27);
+            this.txtFreight.Size = new System.Drawing.Size(357, 23);
             this.txtFreight.TabIndex = 23;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 466);
+            this.label4.Location = new System.Drawing.Point(52, 350);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 22;
             this.label4.Text = "Freight";
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(204, 208);
+            this.txtMemberID.Location = new System.Drawing.Point(178, 156);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(407, 27);
+            this.txtMemberID.Size = new System.Drawing.Size(357, 23);
             this.txtMemberID.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 211);
+            this.label3.Location = new System.Drawing.Point(52, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 20;
             this.label3.Text = "MemberID:";
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(204, 401);
+            this.txtShippedDate.Location = new System.Drawing.Point(178, 301);
+            this.txtShippedDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.Size = new System.Drawing.Size(407, 27);
+            this.txtShippedDate.Size = new System.Drawing.Size(357, 23);
             this.txtShippedDate.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 404);
+            this.label2.Location = new System.Drawing.Point(52, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(80, 15);
             this.label2.TabIndex = 18;
             this.label2.Text = "Shipped Date:";
             // 
             // txtOrderID
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(204, 151);
+            this.txtOrderID.Location = new System.Drawing.Point(178, 113);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(407, 27);
+            this.txtOrderID.Size = new System.Drawing.Size(357, 23);
             this.txtOrderID.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 154);
+            this.label1.Location = new System.Drawing.Point(52, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 16;
             this.label1.Text = "OrderID:";
             // 
-            // UpdateOrder
+            // frmUpdateOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 661);
+            this.ClientSize = new System.Drawing.Size(602, 496);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
@@ -206,8 +214,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.label1);
-            this.Name = "UpdateOrder";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmUpdateOrder";
             this.Text = "UpdateOrder";
+            this.Load += new System.EventHandler(this.frmUploadOrders_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

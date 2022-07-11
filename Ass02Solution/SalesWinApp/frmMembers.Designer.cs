@@ -90,13 +90,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMemberList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMemberList.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.dgvMemberList.Location = new System.Drawing.Point(2, 256);
+            this.dgvMemberList.Location = new System.Drawing.Point(2, 267);
             this.dgvMemberList.Margin = new System.Windows.Forms.Padding(5);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 60;
             this.dgvMemberList.RowTemplate.Height = 25;
-            this.dgvMemberList.Size = new System.Drawing.Size(1282, 411);
+            this.dgvMemberList.Size = new System.Drawing.Size(1280, 387);
             this.dgvMemberList.TabIndex = 2;
             this.dgvMemberList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvMemberList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMemberList_CellFormatting);
@@ -236,26 +236,26 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(97, 23);
+            this.txtMemberID.Location = new System.Drawing.Point(123, 23);
             this.txtMemberID.Multiline = true;
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(191, 28);
+            this.txtMemberID.Size = new System.Drawing.Size(165, 28);
             this.txtMemberID.TabIndex = 11;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(492, 23);
+            this.txtEmail.Location = new System.Drawing.Point(511, 23);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(326, 28);
+            this.txtEmail.Size = new System.Drawing.Size(307, 28);
             this.txtEmail.TabIndex = 12;
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(492, 70);
+            this.txtCompanyName.Location = new System.Drawing.Point(511, 70);
             this.txtCompanyName.Multiline = true;
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(326, 25);
+            this.txtCompanyName.Size = new System.Drawing.Size(307, 25);
             this.txtCompanyName.TabIndex = 13;
             // 
             // txtCountry
@@ -277,11 +277,11 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(97, 67);
+            this.txtPassword.Location = new System.Drawing.Point(123, 67);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(191, 28);
+            this.txtPassword.Size = new System.Drawing.Size(165, 28);
             this.txtPassword.TabIndex = 16;
             // 
             // btnDelete
@@ -331,7 +331,7 @@
             // frmMembers
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvMemberList);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

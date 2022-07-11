@@ -58,7 +58,8 @@ namespace SalesWinApp
                     txtShippedDate.DataBindings.Add("Text", source, "ShippedDate");
                     txtFreight.DataBindings.Add("Text", source, "Freight");
                     dgvOrderList.DataSource = source;
-                    dgvOrderList.Columns["Products"].Visible = false;
+                    dgvOrderList.Columns["OrderDetails"].Visible = false;
+                    dgvOrderList.Columns["Member"].Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -128,6 +129,19 @@ namespace SalesWinApp
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void dgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtOrderDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

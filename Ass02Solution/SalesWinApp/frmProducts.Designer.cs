@@ -145,57 +145,57 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(98, 22);
+            this.txtProductID.Location = new System.Drawing.Point(120, 22);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductID.Multiline = true;
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(248, 31);
+            this.txtProductID.Size = new System.Drawing.Size(226, 31);
             this.txtProductID.TabIndex = 8;
             // 
             // txtCategoryID
             // 
-            this.txtCategoryID.Location = new System.Drawing.Point(464, 22);
+            this.txtCategoryID.Location = new System.Drawing.Point(484, 22);
             this.txtCategoryID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoryID.Multiline = true;
             this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(322, 31);
+            this.txtCategoryID.Size = new System.Drawing.Size(302, 31);
             this.txtCategoryID.TabIndex = 9;
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(98, 86);
+            this.txtWeight.Location = new System.Drawing.Point(120, 86);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
             this.txtWeight.Multiline = true;
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(248, 31);
+            this.txtWeight.Size = new System.Drawing.Size(226, 31);
             this.txtWeight.TabIndex = 10;
             // 
             // txtUnitsInStock
             // 
-            this.txtUnitsInStock.Location = new System.Drawing.Point(956, 86);
+            this.txtUnitsInStock.Location = new System.Drawing.Point(979, 86);
             this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitsInStock.Multiline = true;
             this.txtUnitsInStock.Name = "txtUnitsInStock";
-            this.txtUnitsInStock.Size = new System.Drawing.Size(315, 31);
+            this.txtUnitsInStock.Size = new System.Drawing.Size(292, 31);
             this.txtUnitsInStock.TabIndex = 11;
             this.txtUnitsInStock.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(956, 22);
+            this.txtProductName.Location = new System.Drawing.Point(979, 22);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(315, 31);
+            this.txtProductName.Size = new System.Drawing.Size(292, 31);
             this.txtProductName.TabIndex = 12;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(464, 86);
+            this.txtUnitPrice.Location = new System.Drawing.Point(484, 86);
             this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Multiline = true;
             this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(322, 31);
+            this.txtUnitPrice.Size = new System.Drawing.Size(302, 31);
             this.txtUnitPrice.TabIndex = 13;
             // 
             // label2
@@ -204,7 +204,7 @@
             this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 21);
+            this.label2.Size = new System.Drawing.Size(109, 28);
             this.label2.TabIndex = 14;
             this.label2.Text = "Product ID:";
             // 
@@ -214,7 +214,7 @@
             this.label3.Location = new System.Drawing.Point(368, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 21);
+            this.label3.Size = new System.Drawing.Size(120, 28);
             this.label3.TabIndex = 15;
             this.label3.Text = "Category ID:";
             // 
@@ -224,7 +224,7 @@
             this.label4.Location = new System.Drawing.Point(6, 96);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 21);
+            this.label4.Size = new System.Drawing.Size(79, 28);
             this.label4.TabIndex = 16;
             this.label4.Text = "Weight:";
             // 
@@ -234,7 +234,7 @@
             this.label5.Location = new System.Drawing.Point(368, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 21);
+            this.label5.Size = new System.Drawing.Size(100, 28);
             this.label5.TabIndex = 17;
             this.label5.Text = "Unit Price:";
             // 
@@ -244,7 +244,7 @@
             this.label6.Location = new System.Drawing.Point(829, 32);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 21);
+            this.label6.Size = new System.Drawing.Size(142, 28);
             this.label6.TabIndex = 18;
             this.label6.Text = "Product Name:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -255,7 +255,7 @@
             this.label7.Location = new System.Drawing.Point(829, 96);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 21);
+            this.label7.Size = new System.Drawing.Size(127, 28);
             this.label7.TabIndex = 19;
             this.label7.Text = "Unit In Stock:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -373,9 +373,9 @@
             // 
             // frmProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSearchByID);
