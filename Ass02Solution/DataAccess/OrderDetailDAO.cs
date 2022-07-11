@@ -29,7 +29,7 @@ namespace DataAccess
         }
         public void DeleteOrderDetail(OrderDetail orderDetail) => base.DeleteEntity(orderDetail);
 
-        public IEnumerable<OrderDetail> GetAllOrderDetail() => base.GetAllEntity();
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int orderID) =>  SaleManagementDBContext.OrderDetails.Where(o => o.OrderId.Equals(orderID)).ToList();
 
         public OrderDetail GetOrderDetailByID(int orderID, int productID)
         {

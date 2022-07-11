@@ -22,7 +22,56 @@ namespace SalesWinApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            if (this.Text.Equals("Add New Order"))
+            {
+                try
+                {
+                    int orderID = int.Parse(txtOrderID.Text);
+                    if (orderRepository.GetOrderByID(orderID) == null)
+                    {
+                        var order = new Order
+                        {
+                            Id = orderID,
+                            MemberId = int.Parse(txtMemberID.Text),
+                            OrderDate = Convert.ToDateTime(txtOrderDate.Value),
+                            RequiredDate = Convert.ToDateTime(txtRequiredDate.Value),
+                            ShippedDate = Convert.ToDateTime(txtShippedDate.Value),
+                            Freight = decimal.Parse(txtFreight.Text),
+                        };
+                        orderRepository.InsertOrder(order);
+                        MessageBox.Show("Add new order successfully!");
+                        this.Hide();
+                        Frm.LoadOrderList(orderRepository.GetAllOrder());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Duplicated OrderID!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Add new order fail!");
+                }
+            }
+            else
+            {
+                try
+                {
+                    this.OrderInfo.MemberId = int.Parse(txtMemberID.Text);
+                    this.OrderInfo.OrderDate = txtOrderDate.Value;
+                    this.OrderInfo.RequiredDate = txtRequiredDate.Value;
+                    this.OrderInfo.ShippedDate = txtShippedDate.Value;
+                    this.OrderInfo.Freight = decimal.Parse(txtFreight.Text);
+                    orderRepository.UpdateOrder(this.OrderInfo);
+                    MessageBox.Show("Update order successfully!");
+                    this.Hide();
+                    Frm.LoadOrderList(orderRepository.GetAllOrder());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Update Order fail!");
+                }
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -54,6 +103,6 @@ namespace SalesWinApp
         }
 
         private void btnCancel_Click(object sender, EventArgs e) => this.Close();
-        
+
     }
 }

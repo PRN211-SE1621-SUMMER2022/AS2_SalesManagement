@@ -136,7 +136,7 @@
             // 
             // txtSearchByName
             // 
-            this.txtSearchByName.Location = new System.Drawing.Point(120, 204);
+            this.txtSearchByName.Location = new System.Drawing.Point(683, 218);
             this.txtSearchByName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchByName.Multiline = true;
             this.txtSearchByName.Name = "txtSearchByName";
@@ -204,7 +204,7 @@
             this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 28);
+            this.label2.Size = new System.Drawing.Size(86, 21);
             this.label2.TabIndex = 14;
             this.label2.Text = "Product ID:";
             // 
@@ -214,7 +214,7 @@
             this.label3.Location = new System.Drawing.Point(368, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 28);
+            this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 15;
             this.label3.Text = "Category ID:";
             // 
@@ -224,7 +224,7 @@
             this.label4.Location = new System.Drawing.Point(6, 96);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 28);
+            this.label4.Size = new System.Drawing.Size(62, 21);
             this.label4.TabIndex = 16;
             this.label4.Text = "Weight:";
             // 
@@ -234,7 +234,7 @@
             this.label5.Location = new System.Drawing.Point(368, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 28);
+            this.label5.Size = new System.Drawing.Size(80, 21);
             this.label5.TabIndex = 17;
             this.label5.Text = "Unit Price:";
             // 
@@ -244,7 +244,7 @@
             this.label6.Location = new System.Drawing.Point(829, 32);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 28);
+            this.label6.Size = new System.Drawing.Size(113, 21);
             this.label6.TabIndex = 18;
             this.label6.Text = "Product Name:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -255,7 +255,7 @@
             this.label7.Location = new System.Drawing.Point(829, 96);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 28);
+            this.label7.Size = new System.Drawing.Size(100, 21);
             this.label7.TabIndex = 19;
             this.label7.Text = "Unit In Stock:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -282,10 +282,10 @@
             // 
             // btnSearchByName
             // 
-            this.btnSearchByName.Location = new System.Drawing.Point(416, 205);
+            this.btnSearchByName.Location = new System.Drawing.Point(979, 219);
             this.btnSearchByName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearchByName.Name = "btnSearchByName";
-            this.btnSearchByName.Size = new System.Drawing.Size(168, 39);
+            this.btnSearchByName.Size = new System.Drawing.Size(144, 39);
             this.btnSearchByName.TabIndex = 22;
             this.btnSearchByName.Text = "Search by Name";
             this.btnSearchByName.UseVisualStyleBackColor = true;
@@ -294,7 +294,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(6, 616);
+            this.btnDelete.Location = new System.Drawing.Point(6, 606);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(96, 32);
@@ -306,7 +306,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Location = new System.Drawing.Point(6, 523);
+            this.btnUpdate.Location = new System.Drawing.Point(6, 513);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
@@ -318,7 +318,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Location = new System.Drawing.Point(6, 434);
+            this.btnAdd.Location = new System.Drawing.Point(6, 424);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 32);
@@ -329,10 +329,10 @@
             // 
             // btnSearchByID
             // 
-            this.btnSearchByID.Location = new System.Drawing.Point(966, 205);
+            this.btnSearchByID.Location = new System.Drawing.Point(979, 268);
             this.btnSearchByID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearchByID.Name = "btnSearchByID";
-            this.btnSearchByID.Size = new System.Drawing.Size(129, 39);
+            this.btnSearchByID.Size = new System.Drawing.Size(144, 39);
             this.btnSearchByID.TabIndex = 27;
             this.btnSearchByID.Text = "Search by ID";
             this.btnSearchByID.UseVisualStyleBackColor = true;
@@ -340,20 +340,20 @@
             // 
             // txtSearchByID
             // 
-            this.txtSearchByID.Location = new System.Drawing.Point(719, 205);
+            this.txtSearchByID.Location = new System.Drawing.Point(682, 268);
             this.txtSearchByID.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchByID.Multiline = true;
             this.txtSearchByID.Name = "txtSearchByID";
-            this.txtSearchByID.Size = new System.Drawing.Size(239, 39);
+            this.txtSearchByID.Size = new System.Drawing.Size(289, 39);
             this.txtSearchByID.TabIndex = 26;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(13, 235);
+            this.button2.Location = new System.Drawing.Point(1140, 271);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 32);
+            this.button2.Size = new System.Drawing.Size(99, 36);
             this.button2.TabIndex = 28;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
@@ -362,7 +362,7 @@
             // btnLoad
             // 
             this.btnLoad.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoad.Location = new System.Drawing.Point(6, 336);
+            this.btnLoad.Location = new System.Drawing.Point(6, 326);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(96, 32);
@@ -373,7 +373,7 @@
             // 
             // frmProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.btnLoad);

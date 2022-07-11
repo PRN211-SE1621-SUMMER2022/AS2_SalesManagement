@@ -32,18 +32,18 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.lbUpdateOrderTittle = new System.Windows.Forms.Label();
-            this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtRequiredDate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFreight = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtShippedDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.txtRequiredDate = new System.Windows.Forms.DateTimePicker();
+            this.txtShippedDate = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnSave
@@ -87,17 +87,10 @@
             this.lbUpdateOrderTittle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbUpdateOrderTittle.Location = new System.Drawing.Point(178, 29);
             this.lbUpdateOrderTittle.Name = "lbUpdateOrderTittle";
-            this.lbUpdateOrderTittle.Size = new System.Drawing.Size(193, 37);
+            this.lbUpdateOrderTittle.Size = new System.Drawing.Size(253, 37);
             this.lbUpdateOrderTittle.TabIndex = 28;
-            this.lbUpdateOrderTittle.Text = "Update Order";
-            // 
-            // txtOrderDate
-            // 
-            this.txtOrderDate.Location = new System.Drawing.Point(178, 203);
-            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(357, 23);
-            this.txtOrderDate.TabIndex = 27;
+            this.lbUpdateOrderTittle.Text = "Order Information";
+
             // 
             // label6
             // 
@@ -107,14 +100,6 @@
             this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 26;
             this.label6.Text = "Order Date:";
-            // 
-            // txtRequiredDate
-            // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(178, 250);
-            this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.Size = new System.Drawing.Size(357, 23);
-            this.txtRequiredDate.TabIndex = 25;
             // 
             // label5
             // 
@@ -159,14 +144,6 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "MemberID:";
             // 
-            // txtShippedDate
-            // 
-            this.txtShippedDate.Location = new System.Drawing.Point(178, 301);
-            this.txtShippedDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.Size = new System.Drawing.Size(357, 23);
-            this.txtShippedDate.TabIndex = 19;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -193,24 +170,45 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "OrderID:";
             // 
+            // txtOrderDate
+            // 
+            this.txtOrderDate.Location = new System.Drawing.Point(178, 200);
+            this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.Size = new System.Drawing.Size(194, 23);
+            this.txtOrderDate.TabIndex = 32;
+            // 
+            // txtRequiredDate
+            // 
+            this.txtRequiredDate.Location = new System.Drawing.Point(178, 246);
+            this.txtRequiredDate.Name = "txtRequiredDate";
+            this.txtRequiredDate.Size = new System.Drawing.Size(194, 23);
+            this.txtRequiredDate.TabIndex = 33;
+            // 
+            // txtShippedDate
+            // 
+            this.txtShippedDate.Location = new System.Drawing.Point(178, 297);
+            this.txtShippedDate.Name = "txtShippedDate";
+            this.txtShippedDate.Size = new System.Drawing.Size(194, 23);
+            this.txtShippedDate.TabIndex = 34;
+            // 
             // frmUpdateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 496);
+            this.Controls.Add(this.txtShippedDate);
+            this.Controls.Add(this.txtRequiredDate);
+            this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.lbUpdateOrderTittle);
-            this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtRequiredDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFreight);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtShippedDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.label1);
@@ -229,17 +227,17 @@
         private Button btnCancel;
         private Button btnClear;
         private Label lbUpdateOrderTittle;
-        private TextBox txtOrderDate;
         private Label label6;
-        private TextBox txtRequiredDate;
         private Label label5;
         private TextBox txtFreight;
         private Label label4;
         private TextBox txtMemberID;
         private Label label3;
-        private TextBox txtShippedDate;
         private Label label2;
         private TextBox txtOrderID;
         private Label label1;
+        private DateTimePicker txtOrderDate;
+        private DateTimePicker txtRequiredDate;
+        private DateTimePicker txtShippedDate;
     }
 }

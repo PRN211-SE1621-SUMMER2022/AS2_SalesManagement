@@ -104,7 +104,7 @@ namespace SalesWinApp
             {
                 frmUpdateOrder frmUpdateOrder = new frmUpdateOrder
                 {
-                    Text = "Add Order",
+                    Text = "Add New Order",
                     Frm = this
                 };
                 frmUpdateOrder.ShowDialog();
@@ -139,7 +139,7 @@ namespace SalesWinApp
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Delete a order Error");
+                        MessageBox.Show(ex.Message, "Delete a Order Error");
                     }
                 }
             }

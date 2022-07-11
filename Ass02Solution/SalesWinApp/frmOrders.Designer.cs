@@ -33,15 +33,15 @@
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.l3 = new System.Windows.Forms.Label();
-            this.txtRequiredDate = new System.Windows.Forms.TextBox();
             this.l4 = new System.Windows.Forms.Label();
             this.txtFreight = new System.Windows.Forms.TextBox();
             this.f = new System.Windows.Forms.Label();
-            this.txtShippedDate = new System.Windows.Forms.TextBox();
             this.l6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtRequiredDate = new System.Windows.Forms.DateTimePicker();
+            this.txtOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.txtShippedDate = new System.Windows.Forms.DateTimePicker();
             this.btnView = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -100,16 +100,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "MemberID";
             // 
-            // txtOrderDate
-            // 
-            this.txtOrderDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOrderDate.Location = new System.Drawing.Point(576, 66);
-            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(165, 29);
-            this.txtOrderDate.TabIndex = 5;
-            this.txtOrderDate.TextChanged += new System.EventHandler(this.txtOrderDate_TextChanged);
-            // 
             // l3
             // 
             this.l3.AutoSize = true;
@@ -120,15 +110,6 @@
             this.l3.Size = new System.Drawing.Size(83, 21);
             this.l3.TabIndex = 4;
             this.l3.Text = "OrderDate";
-            // 
-            // txtRequiredDate
-            // 
-            this.txtRequiredDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRequiredDate.Location = new System.Drawing.Point(576, 143);
-            this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.Size = new System.Drawing.Size(165, 29);
-            this.txtRequiredDate.TabIndex = 7;
             // 
             // l4
             // 
@@ -147,7 +128,7 @@
             this.txtFreight.Location = new System.Drawing.Point(937, 143);
             this.txtFreight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFreight.Name = "txtFreight";
-            this.txtFreight.Size = new System.Drawing.Size(165, 29);
+            this.txtFreight.Size = new System.Drawing.Size(200, 29);
             this.txtFreight.TabIndex = 11;
             // 
             // f
@@ -160,15 +141,6 @@
             this.f.Size = new System.Drawing.Size(59, 21);
             this.f.TabIndex = 10;
             this.f.Text = "Freight";
-            // 
-            // txtShippedDate
-            // 
-            this.txtShippedDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtShippedDate.Location = new System.Drawing.Point(938, 66);
-            this.txtShippedDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.Size = new System.Drawing.Size(165, 29);
-            this.txtShippedDate.TabIndex = 9;
             // 
             // l6
             // 
@@ -184,14 +156,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.txtRequiredDate);
+            this.panel1.Controls.Add(this.txtOrderDate);
+            this.panel1.Controls.Add(this.txtShippedDate);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.txtFreight);
             this.panel1.Controls.Add(this.f);
-            this.panel1.Controls.Add(this.txtShippedDate);
             this.panel1.Controls.Add(this.l6);
-            this.panel1.Controls.Add(this.txtRequiredDate);
             this.panel1.Controls.Add(this.l4);
-            this.panel1.Controls.Add(this.txtOrderDate);
             this.panel1.Controls.Add(this.l3);
             this.panel1.Controls.Add(this.txtMemberID);
             this.panel1.Controls.Add(this.label2);
@@ -203,6 +175,27 @@
             this.panel1.Size = new System.Drawing.Size(1220, 272);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtRequiredDate
+            // 
+            this.txtRequiredDate.Location = new System.Drawing.Point(575, 146);
+            this.txtRequiredDate.Name = "txtRequiredDate";
+            this.txtRequiredDate.Size = new System.Drawing.Size(200, 29);
+            this.txtRequiredDate.TabIndex = 15;
+            // 
+            // txtOrderDate
+            // 
+            this.txtOrderDate.Location = new System.Drawing.Point(575, 63);
+            this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.Size = new System.Drawing.Size(200, 29);
+            this.txtOrderDate.TabIndex = 14;
+            // 
+            // txtShippedDate
+            // 
+            this.txtShippedDate.Location = new System.Drawing.Point(937, 66);
+            this.txtShippedDate.Name = "txtShippedDate";
+            this.txtShippedDate.Size = new System.Drawing.Size(200, 29);
+            this.txtShippedDate.TabIndex = 13;
             // 
             // btnView
             // 
@@ -259,10 +252,6 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // orderDAOBindingSource
-            // 
-            this.orderDAOBindingSource.DataSource = typeof(DataAccess.OrderDAO);
             // 
             // btnAdd
             // 
@@ -379,13 +368,10 @@
         private TextBox txtOrderID;
         private TextBox txtMemberID;
         private Label label2;
-        private TextBox txtOrderDate;
         private Label l3;
-        private TextBox txtRequiredDate;
         private Label l4;
         private TextBox txtFreight;
         private Label f;
-        private TextBox txtShippedDate;
         private Label l6;
         private Panel panel1;
         private Button btnLoad;
@@ -401,5 +387,8 @@
         private DataGridViewTextBoxColumn ShippedDate;
         private DataGridViewTextBoxColumn Freight;
         private Button btnView;
+        private DateTimePicker txtShippedDate;
+        private DateTimePicker txtRequiredDate;
+        private DateTimePicker txtOrderDate;
     }
 }
