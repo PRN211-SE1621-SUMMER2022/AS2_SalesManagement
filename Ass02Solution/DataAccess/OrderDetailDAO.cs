@@ -34,10 +34,7 @@ namespace DataAccess
 
         public IEnumerable<OrderDetail> GetAllOrderDetail(int orderID) => salesManagementContext.OrderDetails.Where(o => o.OrderId==orderID).ToList();
 
-        public OrderDetail GetOrderDetailByID(int orderID, int productID)
-        {
-            throw new NotImplementedException();
-        }
+        public OrderDetail GetOrderDetailByID(int orderID, int productID) => salesManagementContext.OrderDetails.Where(o => o.OrderId == orderID && o.ProductId == productID).SingleOrDefault();
 
         public void InsertOrderDetail(OrderDetail orderDetail) => base.SaveEntity(orderDetail);
 

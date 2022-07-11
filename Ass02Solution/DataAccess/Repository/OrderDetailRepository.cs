@@ -13,10 +13,7 @@ namespace DataAccess.Repository
 
         public IEnumerable<OrderDetail> GetAllOrderDetail(int OrderId) => OrderDetailDAO.Instance.GetAllOrderDetail(OrderId);
 
-        public OrderDetail GetOrderDetailByID(int orderID, int productID)
-        {
-            throw new NotImplementedException();
-        }
+        public OrderDetail GetOrderDetailByID(int orderID, int productID) => OrderDetailDAO.Instance.GetOrderDetailByID(orderID, productID);
 
         public void InsertOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.InsertOrderDetail(orderDetail);
 

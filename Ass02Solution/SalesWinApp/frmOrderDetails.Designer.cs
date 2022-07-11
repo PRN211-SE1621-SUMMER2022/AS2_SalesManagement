@@ -56,9 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.dgvOrderDetail = new System.Windows.Forms.DataGridView();
             this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -207,7 +205,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.txtDiscount);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtQuantity);
@@ -313,18 +311,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "OrderID";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(885, 320);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 39);
-            this.btnAdd.TabIndex = 25;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -337,25 +323,13 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(1018, 320);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 39);
-            this.btnUpdate.TabIndex = 23;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnLoad
             // 
             this.btnLoad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Location = new System.Drawing.Point(752, 320);
+            this.btnLoad.Location = new System.Drawing.Point(1017, 320);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 39);
             this.btnLoad.TabIndex = 22;
@@ -406,7 +380,7 @@
             // 
             // Quantity
             // 
-            this.Quantity.DataPropertyName = "Quantityv";
+            this.Quantity.DataPropertyName = "Quantity";
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
@@ -431,15 +405,14 @@
             this.btnBack.TabStop = false;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmOrderDetails
             // 
             this.ClientSize = new System.Drawing.Size(1282, 661);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvOrderDetail);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.panel1);
             this.Name = "frmOrderDetails";
@@ -473,16 +446,9 @@
         private ToolStripMenuItem ordersToolStripMenuItem;
         private Label label1;
         private Panel panel1;
-        private Button btnAdd;
         private Button btnDelete;
-        private Button btnUpdate;
         private Button btnLoad;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn OrderId;
-        private DataGridViewTextBoxColumn ProductId;
-        private DataGridViewTextBoxColumn UnitPrice;
-        private DataGridViewTextBoxColumn Quantity;
-        private DataGridViewTextBoxColumn Discount;
         private Button btnBack;
         private TextBox txtDiscount;
         private Label label7;
@@ -495,5 +461,10 @@
         private TextBox txtOrderID;
         private Label label2;
         private DataGridView dgvOrderDetail;
+        private DataGridViewTextBoxColumn OrderId;
+        private DataGridViewTextBoxColumn ProductId;
+        private DataGridViewTextBoxColumn UnitPrice;
+        private DataGridViewTextBoxColumn Quantity;
+        private DataGridViewTextBoxColumn Discount;
     }
 }

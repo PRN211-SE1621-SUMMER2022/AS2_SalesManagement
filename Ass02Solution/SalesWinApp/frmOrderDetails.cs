@@ -88,7 +88,7 @@ namespace SalesWinApp
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
+            LoadOrderDetailList(orderDetailRepository.GetAllOrderDetail(OrderInfo.Id));
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -98,7 +98,28 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (loginUser != null)
+            {
+                btnDelete.Visible = false;
+            }
+            else
+            {
+                if (dgvOrderDetail.Rows.Count != 0)
+                {
+                    try
+                    {
+                        var orderDetail = GetCurrentOrderInDgv();
+                        orderDetailRepository.DeleteOrderDetail(orderDetail);
+                        LoadOrderDetailList(orderDetailRepository.GetAllOrderDetail(OrderInfo.Id));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Delete a member Error");
+                    }
+                }
+            }
         }
+
+        private void btnBack_Click(object sender, EventArgs e) => this.Close();
     }
 }
