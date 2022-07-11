@@ -28,5 +28,8 @@
     <Compile Update="frmUpdateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmUserMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -30,10 +30,17 @@ namespace SalesWinApp
 
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProducts frm = new frmProducts() { isAdmin = this.isAdmin, loginUser = this.loginUser };
-            frm.MdiParent = this;
-            frm.Show();
-            frm.Activate();
+            if (loginUser != null)
+            {
+                productsToolStripMenuItem.Visible = false;
+            }
+            else {
+                frmProducts frm = new frmProducts() { isAdmin = this.isAdmin, loginUser = this.loginUser };
+                frm.MdiParent = this;
+                frm.Show();
+                frm.Activate();
+            }
+                
         }
 
         private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +49,11 @@ namespace SalesWinApp
             frm.MdiParent = this;
             frm.Show();
             frm.Activate();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

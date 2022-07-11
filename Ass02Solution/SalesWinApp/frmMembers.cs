@@ -128,19 +128,27 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvMemberList.Rows.Count != 0)
+            if (loginUser != null)
             {
-                try
+                btnDelete.Visible = false;
+            }
+            else
+            {
+                if (dgvMemberList.Rows.Count != 0)
                 {
-                    var member = GetCurrentMemberInDgv();
-                    memberRepository.DeleteMember(member);
-                    LoadMemberList();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Delete a member Error");
+                    try
+                    {
+                        var member = GetCurrentMemberInDgv();
+                        memberRepository.DeleteMember(member);
+                        LoadMemberList();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Delete a member Error");
+                    }
                 }
             }
+                
         }
 
         private void btnNew_Click(object sender, EventArgs e)

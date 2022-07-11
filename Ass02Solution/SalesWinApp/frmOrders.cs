@@ -75,26 +75,40 @@ namespace SalesWinApp
 
         private void btnUpdate_click(object sender, EventArgs e)
         {
-            if (dgvOrderList.Rows.Count != 0)
+            if (loginUser != null)
             {
-                frmUpdateOrder frmUpdateOrder = new frmUpdateOrder
+                btnUpdate.Visible = false;
+            }
+            else
+            {
+                if (dgvOrderList.Rows.Count != 0)
                 {
-                    Text = "Update Order",
-                    Frm = this,
-                    OrderInfo = GetCurrentOrderInDgv()
-                };
-                frmUpdateOrder.ShowDialog();
+                    frmUpdateOrder frmUpdateOrder = new frmUpdateOrder
+                    {
+                        Text = "Update Order",
+                        Frm = this,
+                        OrderInfo = GetCurrentOrderInDgv()
+                    };
+                    frmUpdateOrder.ShowDialog();
+                }
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmUpdateOrder frmUpdateOrder = new frmUpdateOrder
+            if (loginUser != null)
             {
-                Text = "Add Order",
-                Frm = this
-            };
-            frmUpdateOrder.ShowDialog();
+                btnAdd.Visible = false;
+            }
+            else
+            {
+                frmUpdateOrder frmUpdateOrder = new frmUpdateOrder
+                {
+                    Text = "Add Order",
+                    Frm = this
+                };
+                frmUpdateOrder.ShowDialog();
+            }
         }
 
         private void frmOrders_Load(object sender, EventArgs e)
@@ -109,17 +123,24 @@ namespace SalesWinApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvOrderList.Rows.Count != 0)
+            if (loginUser != null)
             {
-                try
+                btnDelete.Visible = false;
+            }
+            else
+            {
+                if (dgvOrderList.Rows.Count != 0)
                 {
-                    var product = GetCurrentOrderInDgv();
-                    orderRepository.DeleteOrder(product);
-                    LoadOrderList(orderRepository.GetAllOrder());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Delete a order Error");
+                    try
+                    {
+                        var product = GetCurrentOrderInDgv();
+                        orderRepository.DeleteOrder(product);
+                        LoadOrderList(orderRepository.GetAllOrder());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Delete a order Error");
+                    }
                 }
             }
         }
