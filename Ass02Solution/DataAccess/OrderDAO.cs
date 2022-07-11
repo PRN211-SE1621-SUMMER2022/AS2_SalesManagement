@@ -1,5 +1,6 @@
 ﻿using BusinessObject.Models;
 using DataAccess.Repository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace DataAccess
     {
         private static readonly object instanceLock = new object();
         public static OrderDAO instance = null;
+        private SaleManagementDBContext salesManagementContext = new SaleManagementDBContext();
         private OrderDAO() { }
         public static OrderDAO Instance
         {
@@ -36,5 +38,15 @@ namespace DataAccess
         public void InsertOrder(Order order) => base.SaveEntity(order);
 
         public void UpdateOrder(Order order) => base.UpdateEntity(order);
+        public IEnumerable<Order> GetByMemberId(int memberId) => salesManagementContext.Orders.Where(o => o.MemberId == memberId).Include(o => o.OrderDetails);
+
+        public IEnumerable<Order> GetAllOfMember(int memberId)
+        => salesManagementContext.Orders.Where(o => o.MemberId == memberId).Include(o => o.OrderDetails);
+
+        public IEnumerable<Order> FilterByDate(DateTime startDate, DateTime endate)
+    => salesManagementContext.Orders.Where(o => (o.OrderDate.Date.CompareTo(startDate.Date) >= 0 && o.OrderDate.Date.CompareTo(endate.Date) <= 0)).ToList().OrderByDescending(o => o.OrderDate);
+
+        public IEnumerable<Order> SortDescByDate()
+            => salesManagementContext.Orders.ToList().OrderByDescending(o => o.OrderDate);
     }
 }

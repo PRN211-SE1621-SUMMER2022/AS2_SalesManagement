@@ -55,16 +55,25 @@
             this.RequiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShippedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Freight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSort = new System.Windows.Forms.Button();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.txtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.txtStartDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDAOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
+            this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(78, 66);
+            this.label1.Location = new System.Drawing.Point(77, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
@@ -74,7 +83,7 @@
             // txtOrderID
             // 
             this.txtOrderID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOrderID.Location = new System.Drawing.Point(197, 66);
+            this.txtOrderID.Location = new System.Drawing.Point(196, 34);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(165, 29);
@@ -83,7 +92,7 @@
             // txtMemberID
             // 
             this.txtMemberID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMemberID.Location = new System.Drawing.Point(197, 143);
+            this.txtMemberID.Location = new System.Drawing.Point(196, 111);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(165, 29);
@@ -93,7 +102,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(78, 143);
+            this.label2.Location = new System.Drawing.Point(77, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 21);
@@ -104,7 +113,7 @@
             // 
             this.l3.AutoSize = true;
             this.l3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l3.Location = new System.Drawing.Point(458, 66);
+            this.l3.Location = new System.Drawing.Point(457, 34);
             this.l3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l3.Name = "l3";
             this.l3.Size = new System.Drawing.Size(83, 21);
@@ -115,7 +124,7 @@
             // 
             this.l4.AutoSize = true;
             this.l4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l4.Location = new System.Drawing.Point(436, 146);
+            this.l4.Location = new System.Drawing.Point(435, 114);
             this.l4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l4.Name = "l4";
             this.l4.Size = new System.Drawing.Size(105, 21);
@@ -125,7 +134,7 @@
             // txtFreight
             // 
             this.txtFreight.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtFreight.Location = new System.Drawing.Point(937, 143);
+            this.txtFreight.Location = new System.Drawing.Point(936, 111);
             this.txtFreight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(200, 29);
@@ -135,7 +144,7 @@
             // 
             this.f.AutoSize = true;
             this.f.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.f.Location = new System.Drawing.Point(829, 143);
+            this.f.Location = new System.Drawing.Point(828, 111);
             this.f.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.f.Name = "f";
             this.f.Size = new System.Drawing.Size(59, 21);
@@ -146,7 +155,7 @@
             // 
             this.l6.AutoSize = true;
             this.l6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l6.Location = new System.Drawing.Point(789, 66);
+            this.l6.Location = new System.Drawing.Point(788, 34);
             this.l6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.l6.Name = "l6";
             this.l6.Size = new System.Drawing.Size(99, 21);
@@ -155,7 +164,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.txtRequiredDate);
             this.panel1.Controls.Add(this.txtOrderDate);
             this.panel1.Controls.Add(this.txtShippedDate);
@@ -172,27 +181,26 @@
             this.panel1.Location = new System.Drawing.Point(33, 39);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1220, 272);
+            this.panel1.Size = new System.Drawing.Size(1220, 217);
             this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(575, 146);
+            this.txtRequiredDate.Location = new System.Drawing.Point(574, 114);
             this.txtRequiredDate.Name = "txtRequiredDate";
             this.txtRequiredDate.Size = new System.Drawing.Size(200, 29);
             this.txtRequiredDate.TabIndex = 15;
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(575, 63);
+            this.txtOrderDate.Location = new System.Drawing.Point(574, 31);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(200, 29);
             this.txtOrderDate.TabIndex = 14;
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(937, 66);
+            this.txtShippedDate.Location = new System.Drawing.Point(936, 34);
             this.txtShippedDate.Name = "txtShippedDate";
             this.txtShippedDate.Size = new System.Drawing.Size(200, 29);
             this.txtShippedDate.TabIndex = 13;
@@ -203,7 +211,7 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnView.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnView.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnView.Location = new System.Drawing.Point(990, 211);
+            this.btnView.Location = new System.Drawing.Point(991, 160);
             this.btnView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(130, 41);
@@ -218,10 +226,10 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
-            this.btnLoad.Location = new System.Drawing.Point(703, 335);
+            this.btnLoad.Location = new System.Drawing.Point(737, 311);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(105, 41);
+            this.btnLoad.Size = new System.Drawing.Size(99, 40);
             this.btnLoad.TabIndex = 13;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -231,7 +239,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(1003, 335);
+            this.btnUpdate.Location = new System.Drawing.Point(1003, 311);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(105, 41);
@@ -244,7 +252,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(1148, 335);
+            this.btnDelete.Location = new System.Drawing.Point(1133, 311);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 41);
@@ -257,7 +265,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(853, 335);
+            this.btnAdd.Location = new System.Drawing.Point(874, 311);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 41);
@@ -276,14 +284,13 @@
             this.RequiredDate,
             this.ShippedDate,
             this.Freight});
-            this.dgvOrderList.Location = new System.Drawing.Point(33, 399);
+            this.dgvOrderList.Location = new System.Drawing.Point(135, 399);
             this.dgvOrderList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.RowHeadersWidth = 51;
             this.dgvOrderList.RowTemplate.Height = 29;
-            this.dgvOrderList.Size = new System.Drawing.Size(1220, 262);
+            this.dgvOrderList.Size = new System.Drawing.Size(1141, 262);
             this.dgvOrderList.TabIndex = 18;
-            this.dgvOrderList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_CellContentClick);
             // 
             // Id
             // 
@@ -331,13 +338,88 @@
             this.Freight.HeaderText = "Freight";
             this.Freight.MinimumWidth = 6;
             this.Freight.Name = "Freight";
-            this.Freight.Width = 210;
+            this.Freight.Width = 150;
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(525, 305);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(129, 53);
+            this.btnSort.TabIndex = 19;
+            this.btnSort.Text = "Sort by Descending Date";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.Connection = null;
+            this.sqlCommand1.Notification = null;
+            this.sqlCommand1.Transaction = null;
+            // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(102, 63);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(230, 29);
+            this.txtEndDate.TabIndex = 85;
+            // 
+            // txtStartDate
+            // 
+            this.txtStartDate.Location = new System.Drawing.Point(102, 28);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(230, 29);
+            this.txtStartDate.TabIndex = 84;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.TabIndex = 82;
+            this.label5.Text = "End Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 21);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Start Date";
+            // 
+            // groupBoxSearch
+            // 
+            this.groupBoxSearch.Controls.Add(this.txtEndDate);
+            this.groupBoxSearch.Controls.Add(this.btnFilter);
+            this.groupBoxSearch.Controls.Add(this.txtStartDate);
+            this.groupBoxSearch.Controls.Add(this.label5);
+            this.groupBoxSearch.Controls.Add(this.label4);
+            this.groupBoxSearch.Location = new System.Drawing.Point(42, 277);
+            this.groupBoxSearch.Name = "groupBoxSearch";
+            this.groupBoxSearch.Size = new System.Drawing.Size(443, 99);
+            this.groupBoxSearch.TabIndex = 83;
+            this.groupBoxSearch.TabStop = false;
+            this.groupBoxSearch.Text = "Report statistics sales";
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Location = new System.Drawing.Point(353, 42);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(75, 32);
+            this.btnFilter.TabIndex = 44;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 661);
+            this.Controls.Add(this.groupBoxSearch);
+            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.dgvOrderList);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
@@ -358,6 +440,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDAOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
+            this.groupBoxSearch.ResumeLayout(false);
+            this.groupBoxSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -380,15 +464,23 @@
         private BindingSource orderDAOBindingSource;
         private Button btnAdd;
         private DataGridView dgvOrderList;
+        private Button btnView;
+        private DateTimePicker txtShippedDate;
+        private DateTimePicker txtRequiredDate;
+        private DateTimePicker txtOrderDate;
+        private Button btnSort;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn MemberId;
         private DataGridViewTextBoxColumn OrderDate;
         private DataGridViewTextBoxColumn RequiredDate;
         private DataGridViewTextBoxColumn ShippedDate;
         private DataGridViewTextBoxColumn Freight;
-        private Button btnView;
-        private DateTimePicker txtShippedDate;
-        private DateTimePicker txtRequiredDate;
-        private DateTimePicker txtOrderDate;
+        private DateTimePicker txtEndDate;
+        private DateTimePicker txtStartDate;
+        private Label label5;
+        private Label label4;
+        private GroupBox groupBoxSearch;
+        private Button btnFilter;
     }
 }

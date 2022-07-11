@@ -16,7 +16,9 @@ namespace SalesWinApp
     public partial class frmOrderDetails : Form
     {
         public bool isAdmin { get; set; }
+        public Order OrderInfo { get; set; }
         public Member loginUser { get; set; }
+        OrderRepository orderRepository = new OrderRepository();
 
         IOrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         BindingSource source;
@@ -75,7 +77,7 @@ namespace SalesWinApp
 
         private void frmOrderDetails_Load(object sender, EventArgs e)
         {
-            LoadOrderDetailList(orderDetailRepository.GetAllOrderDetail());
+            LoadOrderDetailList(orderDetailRepository.GetAllOrderDetail(OrderInfo.Id));
         }
 
 

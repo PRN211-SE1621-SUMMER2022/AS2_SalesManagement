@@ -11,7 +11,7 @@ namespace DataAccess.Repository
     {
         public void DeleteOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.DeleteOrderDetail(orderDetail);
 
-        public IEnumerable<OrderDetail> GetAllOrderDetail() => OrderDetailDAO.Instance.GetAllOrderDetail();
+        public IEnumerable<OrderDetail> GetAllOrderDetail(int OrderId) => OrderDetailDAO.Instance.GetAllOrderDetail(OrderId);
 
         public OrderDetail GetOrderDetailByID(int orderID, int productID)
         {

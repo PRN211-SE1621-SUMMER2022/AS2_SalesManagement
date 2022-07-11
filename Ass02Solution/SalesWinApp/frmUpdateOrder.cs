@@ -16,6 +16,7 @@ namespace SalesWinApp
     {
         public Order OrderInfo { get; set; }
         OrderRepository orderRepository = new OrderRepository();
+        public Member loginUser { get; set; }
         public frmOrders Frm { get; set; }  
         public frmUpdateOrder() => InitializeComponent();
         

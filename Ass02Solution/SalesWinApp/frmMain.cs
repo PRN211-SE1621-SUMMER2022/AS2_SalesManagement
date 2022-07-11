@@ -53,7 +53,10 @@ namespace SalesWinApp
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            if (loginUser != null)
+            {
+                productsToolStripMenuItem.Visible=false;
+            }
         }
     }
 }

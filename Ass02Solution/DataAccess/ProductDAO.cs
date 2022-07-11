@@ -48,6 +48,40 @@ namespace DataAccess
             return null;
         }
 
+        public IEnumerable<Product> GetProductByUnitPrice(decimal unitprice)
+        {
+            using (var db = new SaleManagementDBContext())
+            {
+                try
+                {
+                    return (IEnumerable<Product>)db.Set<Product>()
+                        .Where(p => p.UnitPrice<= unitprice).ToList();
+                }
+                catch (Exception)
+                {
+                }
+            }
+            return null;
+        }
+
+        public IEnumerable<Product> GetProductByUnitInStock(int unitstock)
+        {
+            using (var db = new SaleManagementDBContext())
+            {
+                try
+                {
+                    return (IEnumerable<Product>)db.Set<Product>()
+                        .Where(p => p.UnitsInStock <= unitstock).ToList();
+                }
+                catch (Exception)
+                {
+                }
+            }
+            return null;
+        }
+
+
+
         public void InsertProduct(Product product) => base.SaveEntity(product);
 
         public void RemoveProduct(Product product) => base.DeleteEntity(product);

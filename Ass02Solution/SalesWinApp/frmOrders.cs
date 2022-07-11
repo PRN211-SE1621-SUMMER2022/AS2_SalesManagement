@@ -16,6 +16,7 @@ namespace SalesWinApp
     {
         public bool isAdmin { get; set; }
         public Member loginUser { get; set; }
+        private IEnumerable<Order>? orders;
 
         IOrderRepository orderRepository = new OrderRepository();
         BindingSource source;
@@ -44,7 +45,7 @@ namespace SalesWinApp
                 try
                 {
                     source = new BindingSource();
-                    source.DataSource = orders.OrderBy(product => product.OrderDate);
+                    source.DataSource = orders;
                     txtOrderID.DataBindings.Clear();
                     txtMemberID.DataBindings.Clear();
                     txtOrderDate.DataBindings.Clear();
@@ -77,7 +78,7 @@ namespace SalesWinApp
         {
             if (loginUser != null)
             {
-                btnUpdate.Visible = false;
+                
             }
             else
             {
@@ -98,7 +99,7 @@ namespace SalesWinApp
         {
             if (loginUser != null)
             {
-                btnAdd.Visible = false;
+                
             }
             else
             {
@@ -114,11 +115,24 @@ namespace SalesWinApp
         private void frmOrders_Load(object sender, EventArgs e)
         {
             LoadOrderList(orderRepository.GetAllOrder());
+            if (loginUser != null)
+            {
+                btnDelete.Visible = false;
+                LoadOrderList(orderRepository.GetByMemberId(loginUser.Id));
+            }
+            else LoadOrderList(orderRepository.GetAllOrder());
+
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadOrderList(orderRepository.GetAllOrder());
+            if (loginUser != null)
+            {
+                btnDelete.Visible = false;
+                LoadOrderList(orderRepository.GetByMemberId(loginUser.Id));
+            }
+            else LoadOrderList(orderRepository.GetAllOrder());
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -144,25 +158,47 @@ namespace SalesWinApp
                 }
             }
         }
-
+        private IEnumerable<Order> AllOrderInForm()
+        {
+            return loginUser == null ? orderRepository.GetAllOrder() : orderRepository.GetAllOfMember(loginUser.Id);
+        }
         private void btnView_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                frmOrderDetails frm = new frmOrderDetails()
+                {
+                    OrderInfo = orderRepository.GetOrderByID(Int32.Parse(txtOrderID.Text)),
+                    loginUser = loginUser
+                };
+                frm.Show();
+                frm.FormClosed += delegate
+                {
+                    orders = AllOrderInForm();
+                    LoadOrderList(orders);
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            orders = orderRepository.SortDescByDate();
+            LoadOrderList(orders);
         }
 
-        private void dgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnFilter_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtOrderDate_TextChanged(object sender, EventArgs e)
-        {
-
+            DateTime startDate = txtStartDate.Value;
+            DateTime endDate = txtEndDate.Value;
+            orders = orderRepository.FilterByDate(startDate, endDate);
+            LoadOrderList(orders);
+            txtStartDate.Value = startDate;
+            txtEndDate.Value = endDate;
         }
     }
 }

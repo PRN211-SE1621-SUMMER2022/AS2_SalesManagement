@@ -27,7 +27,16 @@ namespace SalesWinApp
 
         }
 
-        private void frmMembers_Load(object sender, EventArgs e) => LoadMemberList();
+        private void frmMembers_Load(object sender, EventArgs e) 
+        {
+            LoadMemberList();
+            if (loginUser != null)
+            {
+                btnDelete.Visible = false;
+                btnCreate.Visible = false;
+            }
+             
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -178,5 +178,61 @@ namespace SalesWinApp
             txtSearchByID.Text = "";
             txtSearchByName.Text = "";
         }
+
+        private void btnSearchByUnitPrice_Click(object sender, EventArgs e)
+        {
+            String searchPrice = txtSearchUnitPrice.Text.Trim();
+            if (searchPrice == null)
+            {
+                LoadProductList(productRepository.GetAllProduct());
+            }
+            else
+            {
+                try
+                {
+                    var product = productRepository.GetProductByUnitPrice(decimal.Parse(searchPrice)); ;
+                    if (product == null)
+                    {
+                        dgvProductList.Rows.Clear();
+                    }
+                    else
+                    {
+                        LoadProductList(product);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Invalid UnitPrice!");
+                }
+            }
+        }
+
+        private void btnSearchByUnitInStock_Click(object sender, EventArgs e)
+        {
+            String searchUnit = txtSearchUnitInStock.Text.Trim();
+            if (searchUnit == null)
+            {
+                LoadProductList(productRepository.GetAllProduct());
+            }
+            else
+            {
+                try
+                {
+                    var product = productRepository.GetProductByUnitInStock(int.Parse(searchUnit)); ;
+                    if (product == null)
+                    {
+                        dgvProductList.Rows.Clear();
+                    }
+                    else
+                    {
+                        LoadProductList(product);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Invalid UnitInStock!");
+                }
+            }
+        }
     }
 }
